@@ -9,14 +9,17 @@ import { blobtoBase64 } from "../../ultils/common/filetoBase64";
 
 function EditPersonal() {
   const dispatch = useDispatch();
-  const [avatars, setAvatars] = useState("");
+
   const { userData } = useSelector((state) => state.user);
-  const [payload, setPayload] = useState({
-    userId: userData?.id,
-    name: userData?.name,
-    zalo: userData?.zalo || "",
-    fbUrl: userData?.fbUrl,
-    avatar: JSON.parse(blobtoBase64(userData.avatar)) || "",
+  const [payload, setPayload] = useState(() => {
+    const init = {
+      userId: userData?.id || "",
+      name: userData?.name ? userData?.name : "",
+      zalo: userData?.zalo ? userData?.zalo : "",
+      fbUrl: userData?.fbUrl ? userData?.fbUrl : "",
+      avatar: userData.avatar ? JSON.parse(blobtoBase64(userData.avatar)) : "",
+    };
+    return init;
   });
 
   const handleUpdate = async () => {

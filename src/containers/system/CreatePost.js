@@ -121,6 +121,7 @@ function CreatePost({ title, isEdit, setIsEdit }) {
     setType(type);
     setShow(!show);
   };
+  console.log(userData);
 
   const [imagesPreview, SetImagesPreview] = useState([]);
   const [loading, setLoading] = useState(false);

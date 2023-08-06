@@ -4,8 +4,7 @@ import { apiUploadImages } from "../services/post";
 import { filetoBase64 } from "../ultils/common/filetoBase64";
 function InputFormFlex({
   label,
-  setAvatars,
-  avatars,
+
   type,
   value,
   setValue,
@@ -13,7 +12,6 @@ function InputFormFlex({
   avatar,
   disable,
 }) {
-  console.log(typeof avatarad);
   const handle = async (e) => {
     e.stopPropagation();
     let images = await filetoBase64(e.target.files[0]);
@@ -22,7 +20,16 @@ function InputFormFlex({
       avatar: images,
     }));
   };
-  console.log(value);
+  console.log({
+    label,
+
+    type,
+    value,
+    setValue,
+    mk,
+    avatar,
+    disable,
+  });
   return (
     <div className="flex items-center w-full gap-3 justify-center">
       <label htmlFor="phone" className="text-md w-[27%]">
