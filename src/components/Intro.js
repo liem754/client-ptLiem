@@ -25,11 +25,11 @@ function Intro() {
           ))}
         {text.description2}
       </span>
-      <div className="flex justify-around mt-3">
+      <div className="flex gap-2 justify-around mt-3">
         {text.statistic.map((item, index) => (
           <div key={index} className="text-sm">
-            <h1 className="font-medium text-xl">{item.value}</h1>
-            <span>{item.name}</span>
+            <h1 className="font-medium text-md lg:text-xl">{item.value}</h1>
+            <span className="text-xs lg:text-md">{item.name}</span>
           </div>
         ))}
       </div>

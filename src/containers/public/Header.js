@@ -32,13 +32,13 @@ function Header() {
     headerRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
   }, [searchParams.get("page")]);
   return (
-    <div ref={headerRef} className="w-3/5">
-      <div className="w-full flex items-center justify-between ">
+    <div ref={headerRef} className="lg:w-3/5 w-4/5">
+      <div className="w-full flex items-center justify-between gap-7 ">
         <Link to="/">
           <img
             src={logo1}
             alt=""
-            className="w-[200px] h-[74px] object-contain"
+            className="w-[120px] md:w-[140px] lg:w-[200px] h-[74px] object-contain"
           />
         </Link>
         <div className="flex items-center gap-2">
@@ -47,33 +47,42 @@ function Header() {
               <small>Phongtro123.com xin chào !</small>
               <Button
                 text={"Đăng nhập"}
+                pd={"lg:py-3"}
                 textColor="text-white"
                 bgColor="bg-[#3061fb]"
+                sizefont={"lg:text-[16px] text-sm"}
                 onClick={() => goLogin(false)}
               />
               <Button
                 text={"Đăng ký"}
                 textColor="text-white"
+                sizefont={"lg:text-[16px] text-sm"}
                 bgColor="bg-[#3061fb]"
+                pd={"lg:py-3"}
                 onClick={() => goLogin(true)}
               />
               <Button
                 text={"Tạo tài khoản mới"}
+                sizefont={"lg:text-[16px] text-sm"}
                 textColor="text-white"
-                bgColor="bg-red-700"
+                pd={"lg:py-3"}
+                bgColor="bg-[#00CC00]"
               />
             </>
           )}
           {isLoggedIn && (
             <div className="relative flex items-center gap-3">
-              <Link to="/he-thong/tao-moi-bai-dang">
+              <Link className="-mr-2 md:mr-0" to="/he-thong/tao-moi-bai-dang">
                 <User />
               </Link>
 
               <Button
                 text={"Quản lý thông tin"}
+                sizefont={"lg:text-[16px] text-md"}
+                pd={"lg:py-3"}
+                hiden={"hidden lg:flex"}
                 textColor="text-white"
-                bgColor="bg-red-700"
+                bgColor="bg-[#009900]"
                 IcAfter={AiOutlineDown}
                 size={12}
                 onClick={() => setShow(!show)}
@@ -84,7 +93,7 @@ function Header() {
                     e.stopPropagation();
                     setShow(false);
                   }}
-                  className="bg-white absolute top-[100%] left-[46%] shadow-lg px-4 py-3"
+                  className="bg-white absolute z-20 top-[100%] left-[46%] shadow-lg px-4 py-3"
                 >
                   {menuManage &&
                     menuManage.map((item) => (
@@ -105,7 +114,11 @@ function Header() {
               <Button
                 text={"Đăng xuất"}
                 textColor="text-white"
-                bgColor="bg-red-700"
+                pd={"lg:py-3"}
+                mgt={"mt-2 lg:mt-0"}
+                w="w-[40%] md:w-auto"
+                sizefont={"md:text-[16px] text-[10px]"}
+                bgColor="bg-[#009900]"
                 onClick={() => dispatch(actions.logout())}
               />
             </div>

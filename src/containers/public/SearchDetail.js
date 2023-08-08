@@ -20,11 +20,11 @@ const SearchDetail = () => {
         } phòng mới xây, chính chủ gần chợ, trường học, siêu thị, cửa hàng tiện lợi, khu an ninh.`}</p>
       </div>
       <div className="w-full flex gap-4">
-        <div className="w-[70%]">
+        <div className="md:w-[70%] w-full">
           <List />
           <Pagination />
         </div>
-        <div className="w-[30%] flex flex-col gap-4 justify-start items-center">
+        <div className="w-[30%] hidden md:flex md:flex-col gap-4 justify-start items-center">
           <ItemSidebar
             isdouble={true}
             type="priceCode"

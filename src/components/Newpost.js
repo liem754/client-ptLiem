@@ -9,7 +9,7 @@ function Newpost({ header, ishuy }) {
     dispatch(actions.getNewPost());
   }, []);
   return (
-    <div className="w-full bg-white p-3">
+    <div className="w-full bg-white p-3 hidden lg:block">
       <h2 className="font-medium mb-4">{header}</h2>
       <div className="w-full flex flex-col gap-3">
         {newPosts?.length > 0 &&

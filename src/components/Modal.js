@@ -128,7 +128,7 @@ function Modal({
           e.stopPropagation();
           setIsmodal(true);
         }}
-        className="w-2/5 p-4 bg-white rounded-sm relative"
+        className=" w-4/5 lg:w-2/5 p-4 bg-white rounded-sm relative"
       >
         <div className="flex items-center border-b-2 pb-3 ">
           <span
@@ -139,7 +139,9 @@ function Modal({
           >
             <AiOutlineArrowLeft size={22} />
           </span>
-          <h2 className="font-medium ml-[40%]">{defaultText.toUpperCase()}</h2>
+          <h2 className="font-medium ml-[30%] lg:ml-[40%]">
+            {defaultText.toUpperCase()}
+          </h2>
         </div>
 
         {(name === "category" || name === "province") && (

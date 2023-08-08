@@ -33,13 +33,13 @@ function Rentalapartment() {
       </div>
       <Provinces />
       <div className="w-full flex justify-between gap-3 mt-12">
-        <div className="w-[70%] ">
+        <div className="md:w-[70%] w-full ">
           <List categoryCode={categoryCode} />
           <div className="mt-5">
             <Pagination />
           </div>
         </div>
-        <div className="w-[30%] flex flex-col gap-4">
+        <div className="w-[30%] hidden md:flex md:flex-col gap-4">
           <ItemSidebar
             text={prices}
             type="priceCode"

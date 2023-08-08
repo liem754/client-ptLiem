@@ -11,7 +11,7 @@ import { useDispatch } from "react-redux";
 import * as actions from "../store/actions/post";
 const { AiOutlineRight } = Icons;
 
-function ItemSidebar({ text, title, isdouble, type }) {
+function ItemSidebar({ text, title, isdouble, type, no }) {
   const dispatch = useDispatch();
   const location = useLocation();
   const navigate = useNavigate();
@@ -37,36 +37,42 @@ function ItemSidebar({ text, title, isdouble, type }) {
   };
   return (
     <div className="w-full rounded-md py-5 px-5 bg-white">
-      <h2 className="font-medium text-lg mb-3">{title}</h2>
+      {!no && <h2 className="font-medium lg:text-lg mb-3">{title}</h2>}
       {!isdouble &&
         text &&
         text.map((item) => (
           <Link
             to={`${formatVietnameseToString(item.value)}`}
             key={item.code}
-            className="flex pl-2 my-2 gap-1 items-center"
+            className="flex pl-2 my-2 gap-1 items-center hover:text-orange-600"
           >
-            <AiOutlineRight size={14} />
-            <h2 className="cursor-pointer hover:text-[red]">{item.value}</h2>
+            <AiOutlineRight className="text-[10px] lg:text-[14px]" />
+            <h2 className="text-[12px] lg:text-sm">{item.value}</h2>
           </Link>
         ))}
       {isdouble &&
         formatContent(text).map((item, index) => (
           <div key={index} className="">
-            <div className="w-full flex items-center gap-2 justify-around">
+            <div className="w-full lg:flex items-center gap-2 justify-around">
               <div
                 onClick={() => handleFilterPosts(item.left.code)}
                 className="flex text-sm flex-1 gap-1 mb-2 items-center cursor-pointer hover:text-orange-600 border-b border-gray-200 pb-1 border-dashed"
               >
-                <AiOutlineRight size={14} color="#333" />
-                <p className="w-full">{item.left.value}</p>
+                <AiOutlineRight
+                  className="text-[10px] lg:text-[14px]"
+                  color="#333"
+                />
+                <p className="text-[12px] lg:text-sm">{item.left.value}</p>
               </div>
               <div
                 className="flex text-sm flex-1 gap-1 mb-2 items-center cursor-pointer hover:text-orange-600 border-b border-gray-200 pb-1 border-dashed"
                 onClick={() => handleFilterPosts(item.right.code)}
               >
-                <AiOutlineRight size={14} color="#333" />
-                <p>{item.right.value}</p>
+                <AiOutlineRight
+                  className="text-[10px] lg:text-[14px]"
+                  color="#333"
+                />
+                <p className="text-[12px] lg:text-sm">{item.right.value}</p>
               </div>
             </div>
           </div>

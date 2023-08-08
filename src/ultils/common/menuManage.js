@@ -16,7 +16,7 @@ const menuManage = [
     icon: <MdOutlineLibraryBooks />,
   },
   {
-    id: 4,
+    id: 3,
     text: "Thông tin tài khoản",
     path: "/he-thong/sua-thong-tin-ca-nhan",
     icon: <BiUserPin />,

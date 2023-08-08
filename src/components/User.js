@@ -5,9 +5,13 @@ function User({ name, avatar, id, no, phone }) {
   const { userData } = useSelector((state) => state.user);
 
   return (
-    <div className={`flex ${no && "item-center"} items-start gap-2 `}>
+    <div
+      className={`flex ${
+        no && "item-center"
+      } items-start gap-2 lg:gap-3 lg:ml-0 ml-3`}
+    >
       <img
-        className={`w-[50px] h-[50px] rounded-[50%]  ${
+        className={`lg:w-[50px] lg:h-[50px] w-[40px] h-[40px] rounded-[50%] mt-2 lg:mt-1  ${
           no && "w-[60px] h-[60px] mt-1 mr-1"
         } `}
         src={
@@ -22,21 +26,33 @@ function User({ name, avatar, id, no, phone }) {
           {no ? (
             <div className="mt-1">
               <h3 className="leading-6">
-                <span className="font-medium text-lg">{userData?.name}</span>
+                <span className="font-medium text-sm lg:text-lg">
+                  {userData?.name}
+                </span>
               </h3>
-              <span className="text-lg">{userData?.phone}</span>
+              <span className="text-xs lg:text-md">{userData?.phone}</span>
             </div>
           ) : (
-            <>
-              <h3 className="leading-6">
-                Xin chào, <span className="font-medium">{userData?.name}</span>
-              </h3>
-              <span>{`Mã tài khoản: ${
-                userData &&
-                Object.keys.length > 0 &&
-                userData?.id?.replace(/[^0-9]/g, "")?.substring(0, 8)
-              }`}</span>
-            </>
+            <div className="mt-1">
+              <div className="">
+                <h3 className="lg:leading-6 text-xs hidden lg:inline  mt-3 lg:mt-0 lg:text-[16px]">
+                  Xin chào,
+                </h3>
+                <span className="font-medium mt-2 lg:mt-0 block lg:inline md:text-[16px] text-xs ">
+                  {userData?.name}
+                </span>
+              </div>
+              <div className="">
+                <span className="text-xs lg:text-[16px] hidden lg:inline">
+                  Mã tài khoản:
+                </span>
+                <span className="text-xs md:text-[16px] md:mt-[3px] mt-0 flex lg:inline">
+                  {userData &&
+                    Object.keys.length > 0 &&
+                    userData?.id?.replace(/[^0-9]/g, "")?.substring(0, 8)}
+                </span>
+              </div>
+            </div>
           )}
         </div>
       )}
