@@ -11,6 +11,7 @@ import {
   AiFillStar,
   AiOutlineDown,
   AiOutlineLogout,
+  AiOutlineMenu,
 } from "react-icons/ai";
 import { SiZalo } from "react-icons/si";
 import { MdOutlinePlace } from "react-icons/md";
@@ -37,7 +38,7 @@ import { ImPencil2 } from "react-icons/im";
 
 const Icons = {
   SiZalo,
-
+  AiOutlineMenu,
   AiOutlineLogout,
   BiSquare,
   MdOutlinePriceChange,

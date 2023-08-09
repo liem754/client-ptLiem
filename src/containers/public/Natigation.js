@@ -2,21 +2,22 @@ import { NavLink } from "react-router-dom";
 import { formatVietnameseToString } from "../../ultils/common/format";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-
+import Icons from "../../ultils/icons";
+const { AiOutlineMenu } = Icons;
 function Natigation() {
   const [show, setShow] = useState(false);
   const { categories } = useSelector((state) => state.app);
 
   return (
-    <div className="w-screen h-[40px] mb-2 flex justify-center items-center bg-secondary1 ">
+    <div className="w-screen h-[40px] mb-2 flex md:justify-center items-center bg-secondary1 ">
       <div
-        className="relative md:hidden text-white"
+        className="relative md:hidden text-white ml-10"
         onClick={(e) => {
           e.stopPropagation();
           setShow(!show);
         }}
       >
-        Menu
+        <AiOutlineMenu size={"18px"} color="#fff" />
       </div>
 
       <div

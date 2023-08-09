@@ -44,7 +44,9 @@ function Header() {
         <div className="flex items-center gap-2">
           {!isLoggedIn && (
             <>
-              <small>Phongtro123.com xin chào !</small>
+              <small className="lg:block hidden">
+                Phongtroliem.com xin chào !
+              </small>
               <Button
                 text={"Đăng nhập"}
                 pd={"lg:py-3"}
@@ -60,13 +62,6 @@ function Header() {
                 bgColor="bg-[#3061fb]"
                 pd={"lg:py-3"}
                 onClick={() => goLogin(true)}
-              />
-              <Button
-                text={"Tạo tài khoản mới"}
-                sizefont={"lg:text-[16px] text-sm"}
-                textColor="text-white"
-                pd={"lg:py-3"}
-                bgColor="bg-[#00CC00]"
               />
             </>
           )}
