@@ -10,17 +10,19 @@ function User({ name, avatar, id, no, phone }) {
         no && "item-center"
       } items-start gap-2 lg:gap-3 lg:ml-0 ml-3`}
     >
-      <img
-        className={`lg:w-[50px] lg:h-[50px] w-[40px] h-[40px] rounded-[50%] mt-2 lg:mt-1  ${
-          no && "w-[60px] h-[60px] mt-1 mr-1"
-        } `}
-        src={
-          userData?.avatar
-            ? JSON.parse(blobtoBase64(userData.avatar))
-            : "https://antimatter.vn/wp-content/uploads/2022/11/anh-avatar-trang-fb-mac-dinh.jpg"
-        }
-        alt=""
-      />
+      {userData && Object.keys(userData).length > 0 && (
+        <img
+          className={`lg:w-[50px] lg:h-[50px] w-[40px] h-[40px] rounded-[50%] mt-2 lg:mt-1  ${
+            no && "w-[60px] h-[60px] mt-1 mr-1"
+          } `}
+          src={
+            userData?.avatar
+              ? JSON.parse(blobtoBase64(userData.avatar))
+              : "https://antimatter.vn/wp-content/uploads/2022/11/anh-avatar-trang-fb-mac-dinh.jpg"
+          }
+          alt=""
+        />
+      )}
       {userData && Object.keys(userData).length > 0 && (
         <div className="flex flex-col text-black leading-5">
           {no ? (
