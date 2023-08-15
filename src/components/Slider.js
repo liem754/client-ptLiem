@@ -73,10 +73,10 @@ function Slider({ posts }) {
           })}
       </Swiper>
 
-      <a className="pre cursor-pointer absolute top-[40%] left-4 p-1 bg-yellow-400 rounded-[50%]">
+      <a className="pre cursor-pointer absolute top-[40%] left-4 p-1 bg-yellow-400 rounded-[50%] z-30">
         <GrFormPrevious size={"30px"} color={"white"} />
       </a>
-      <a className="next cursor-pointer p-1 bg-yellow-400 rounded-[50%] absolute top-[40%] right-4">
+      <a className="next cursor-pointer p-1 bg-yellow-400 rounded-[50%] absolute top-[40%] right-4 z-30">
         <GrFormNext size={"30px"} />
       </a>
     </div>

@@ -102,15 +102,15 @@ function DetailPost() {
   // }, []);
   return (
     <div className="w-full flex flex-col gap-2">
-      <div className="w-full flex justify-between gap-3 mt-12">
-        <div className="w-[70%] ">
+      <div className="w-full lg:flex flex-col justify-between gap-3 mt-12">
+        <div className="lg:w-[70%] w-full ">
           <div className="bg-black w-full flex justify-center relative mb-2">
             <Slider posts={posts[0]} />
           </div>
           <h1 className=" text-center text-green-600 mt-2 text-lg font-medium">
             {posts[0]?.title}
           </h1>
-          <div className="flex items-center gap-2">
+          <div className="lg:flex flex-col items-center gap-2">
             <h2>Chuyên mục:</h2>
             <h2
               onClick={handle}
@@ -147,13 +147,13 @@ function DetailPost() {
           </div>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125399.44217347518!2d106.59597650505178!3d10.831766271495315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f464d6c70b5%3A0x5d0166af04b12165!2zQ-G7rWEgaMOgbmcgTG91aXMgVnVpdHRvbiBI4buTIENow60gTWluaA!5e0!3m2!1svi!2s!4v1691578818572!5m2!1svi!2s"
-            width="600"
+            className="w-full"
             height="450"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-        <div className="w-[30%] flex flex-col gap-4">
+        <div className="lg:w-[30%] w-full mt-3 lg:mt-0 flex flex-col gap-4">
           <Profile
             name={posts[0]?.users?.name}
             avatar={posts[0]?.users?.avatar}
