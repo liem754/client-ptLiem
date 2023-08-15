@@ -102,8 +102,8 @@ function DetailPost() {
   // }, []);
   return (
     <div className="w-full flex flex-col gap-2">
-      <div className="w-full lg:flex flex-col justify-between gap-3 mt-12">
-        <div className="lg:w-[70%] w-full ">
+      <div className="w-full flex flex-wrap justify-between gap-3 mt-12">
+        <div className="lg:w-[68%] w-full ">
           <div className="bg-black w-full flex justify-center relative mb-2">
             <Slider posts={posts[0]} />
           </div>

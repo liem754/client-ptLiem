@@ -16,7 +16,7 @@ function Slider({ posts }) {
   // }, [images]);
 
   return (
-    <div className="w-[80%] h-[320px]  items-center slide-container ">
+    <div className="w-[100%] md:w-[80%] md:h-[320px] h-[280px]  items-center slide-container ">
       {/* <Slide> */}
       <Swiper
         // effect="coverflow"
@@ -59,7 +59,7 @@ function Slider({ posts }) {
             return (
               <SwiperSlide>
                 <div key={index} className="flex w-full justify-center">
-                  <div className="h-[320px] w-[70%]">
+                  <div className="md:h-[320px] h-[280px] w-full md:w-[80%]">
                     <img
                       className="bg-cover h-[100%] w-[100%]"
                       key={index}
