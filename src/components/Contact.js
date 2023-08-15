@@ -4,7 +4,7 @@ import Button from "./Button";
 function Contact() {
   return (
     <div className="w-full bg-white flex flex-col items-center py-7 px-7 gap-6 rounded-md border border-dashed border-8 border-indigo-100">
-      <img className="w-2/5 " src={text.image} />
+      <img className="lg:w-3/5 w-4/5 " src={text.image} />
       <h2 className="text-lg">{text.content}</h2>
       <div className="w-full md:flex text-center justify-around">
         {text.contacts.map((item, index) => (

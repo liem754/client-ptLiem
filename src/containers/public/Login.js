@@ -49,7 +49,7 @@ function Login() {
   //hàm set input hợp lệ
 
   return (
-    <div className="bg-white w-[600px] p-[30px] pb-[100px] rounded-md shadow-sm">
+    <div className="bg-white w-full lg:w-[80%] p-[30px] pb-[100px] rounded-md shadow-lg border-2">
       <h3 className="font-semibold text-lg mb-2">
         {isRegister ? "Đăng ký tài khoản" : "Đăng nhập"}
       </h3>

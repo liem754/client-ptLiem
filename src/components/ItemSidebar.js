@@ -36,8 +36,14 @@ function ItemSidebar({ text, title, isdouble, type, no }) {
     });
   };
   return (
-    <div className="w-full rounded-md py-5 px-5 bg-white">
-      {!no && <h2 className="font-medium lg:text-lg mb-3">{title}</h2>}
+    <div
+      className={`w-full rounded-md py-5 ${
+        !isdouble ? "px-0 -mt-2 " : "px-5"
+      } bg-white`}
+    >
+      {!no && (
+        <h2 className="font-medium text-sm lg:text-[15px] mb-3">{title}</h2>
+      )}
       {!isdouble &&
         text &&
         text.map((item) => (

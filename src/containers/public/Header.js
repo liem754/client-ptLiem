@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import * as actions from "../../store/actions";
 import menuManage from "../../ultils/common/menuManage";
 import { blobtoBase64 } from "../../ultils/common/filetoBase64";
-const { AiOutlinePlusCircle, AiOutlineDown } = Icons;
+const { AiOutlineMenu, AiOutlineDown } = Icons;
 
 function Header() {
   const { isLoggedIn } = useSelector((state) => state.auth);
@@ -52,13 +52,13 @@ function Header() {
                 pd={"lg:py-3"}
                 textColor="text-white"
                 bgColor="bg-[#3061fb]"
-                sizefont={"lg:text-[16px] text-sm"}
+                sizefont={"lg:text-[16px] text-[11px]"}
                 onClick={() => goLogin(false)}
               />
               <Button
                 text={"Đăng ký"}
                 textColor="text-white"
-                sizefont={"lg:text-[16px] text-sm"}
+                sizefont={"lg:text-[16px] text-[11px]"}
                 bgColor="bg-[#3061fb]"
                 pd={"lg:py-3"}
                 onClick={() => goLogin(true)}

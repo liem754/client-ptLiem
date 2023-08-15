@@ -26,11 +26,11 @@ function Homepage() {
       <Provinces />
       <div className="bg-white flex gap-3 md:hidden mt-10">
         <div className="mt-5 flex flex-col gap-2 pl-3 flex-1">
-          <h1 className="border-2 border-black py-1 px-1 text-sm text-center font-medium">
+          <h1 className="border-2 border-black py-1 px-1 text-[12px] text-center font-medium">
             Chọn phương thức lọc
           </h1>
           <div
-            className={`text-sm ${
+            className={`text-[12px] ${
               show1 && "underline underline-offset-4 text-red-600"
             }`}
             onClick={() => {
@@ -42,7 +42,7 @@ function Homepage() {
             Danh sách cho thuê
           </div>
           <div
-            className={`text-sm ${
+            className={`text-[12px] ${
               show2 && "underline underline-offset-4 text-red-600"
             }`}
             onClick={() => {
@@ -59,7 +59,7 @@ function Homepage() {
               setShow2(false);
               setShow3(true);
             }}
-            className={`text-sm ${
+            className={`text-[12px] ${
               show3 && "underline underline-offset-4 text-red-600"
             }`}
           >

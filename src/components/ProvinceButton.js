@@ -23,7 +23,7 @@ function ProvinceButton({ name, image, provinceCode }) {
         src={image}
         alt={name}
       />
-      <div className="font-medium p-2 text-blue-700 text-center lg:text-md text-sm hover:text-orange-500">
+      <div className="font-medium p-2 text-blue-700 text-center lg:text-md text-[12px] md:text-sm hover:text-orange-500">
         {name}
       </div>
     </div>

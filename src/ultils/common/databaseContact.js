@@ -1,5 +1,6 @@
 export const text = {
-  image: "https://phongtro123.com/images/support-bg.jpg",
+  image:
+    "https://cdn.mykiot.vn/2021/06/1623174258674944c20c234211339dd6ba1721aac5.jpg",
   content: "Liên hệ với chúng tôi nếu bạn cần hỗ trợ:",
   contacts: [
     {
