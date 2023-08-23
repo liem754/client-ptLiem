@@ -65,7 +65,7 @@ function ItemSidebar({ text, title, isdouble, type, no }) {
                 className="flex text-sm flex-1 gap-1 mb-2 items-center cursor-pointer hover:text-orange-600 border-b border-gray-200 pb-1 border-dashed"
               >
                 <AiOutlineRight
-                  className="text-[10px] lg:text-[14px]"
+                  className="text-[10px] lg:text-[13px]"
                   color="#333"
                 />
                 <p className="text-[12px] lg:text-sm">{item.left.value}</p>
@@ -75,7 +75,7 @@ function ItemSidebar({ text, title, isdouble, type, no }) {
                 onClick={() => handleFilterPosts(item.right.code)}
               >
                 <AiOutlineRight
-                  className="text-[10px] lg:text-[14px]"
+                  className="text-[10px] lg:text-[13px]"
                   color="#333"
                 />
                 <p className="text-[12px] lg:text-sm">{item.right.value}</p>

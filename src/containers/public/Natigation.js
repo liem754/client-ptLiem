@@ -9,7 +9,7 @@ function Natigation() {
   const { categories } = useSelector((state) => state.app);
 
   return (
-    <div className="w-screen h-[40px] mb-2 flex md:justify-center items-center bg-secondary1 ">
+    <div className="w-screen h-[45px] mb-2 flex md:justify-center items-center bg-black mt-2">
       <div
         className="relative md:hidden text-white ml-10"
         onClick={(e) => {
@@ -31,7 +31,7 @@ function Natigation() {
             className={({ isActive }) =>
               isActive
                 ? "hover:bg-secondary2 bg-secondary2 h-full text-white px-3 py-2 lg:text-[16px] text-xs flex items-center"
-                : "hover:bg-secondary2 bg-secondary1 h-full text-white px-3 py-2 lg:text-[16px] text-xs flex items-center"
+                : "hover:bg-secondary2 bg-black h-full text-white px-3 py-2 lg:text-[16px] text-xs flex items-center"
             }
           >
             Trang chủ
@@ -46,7 +46,7 @@ function Natigation() {
               className={({ isActive }) =>
                 isActive
                   ? "hover:bg-secondary2 bg-secondary2 h-full px-3 py-2 text-white lg:text-[16px] text-xs  flex items-center"
-                  : "hover:bg-secondary2 bg-secondary1 h-full px-3 py-2  text-white lg:text-[16px] text-xs flex items-center"
+                  : " bg-black h-full px-3 py-2  text-white lg:text-[16px] text-xs flex items-center"
               }
             >
               {item.value}
@@ -59,8 +59,8 @@ function Natigation() {
           to={"/"}
           className={({ isActive }) =>
             isActive
-              ? "hover:bg-secondary2 bg-secondary2 h-full px-3 py-2 lg:text-[16px] text-xs flex items-center"
-              : "hover:bg-secondary2 bg-secondary1 h-full px-3 py-2 lg:text-[16px] text-xs flex items-center"
+              ? "hover:bg-secondary2  bg-secondary1 h-full px-3 py-2 lg:text-[16px] text-xs flex items-center"
+              : "hover:bg-secondary  h-full px-3 py-2 lg:text-[16px] text-xs flex items-center"
           }
         >
           Trang chủ
@@ -76,8 +76,8 @@ function Natigation() {
                 to={`${formatVietnameseToString(item.value)}`}
                 className={({ isActive }) =>
                   isActive
-                    ? "hover:bg-secondary2 bg-secondary2 h-full px-3 py-2 lg:text-[16px] text-xs  flex items-center"
-                    : "hover:bg-secondary2 bg-secondary1 h-full px-3 py-2  lg:text-[16px] text-xs flex items-center"
+                    ? "hover:bg-secondary2 bg-secondary1 h-full px-3 py-2 lg:text-[16px] text-xs  flex items-center"
+                    : "hover:bg-secondary2 bg-black h-full px-3 py-2  lg:text-[16px] text-xs flex items-center"
                 }
               >
                 {item.value}
